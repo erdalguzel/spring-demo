@@ -15,13 +15,12 @@ public @interface CourseCode {
 
 	// define attributes and assign default values to them
 
-	public String value() default "LUV";
+	public String[] value() default { "LUV" };
 
-	public String message() default "must start with LUV";
+	public String message() default "must start with LUV or CME";
 
 	public Class<?>[] groups() default {};
 
 	public Class<? extends Payload>[] payload() default {};
-	
-	
+
 }

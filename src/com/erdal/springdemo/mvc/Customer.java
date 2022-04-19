@@ -15,15 +15,15 @@ public class Customer {
 	@NotNull
 	@Size(min = 1, message = "is required")
 	private String lastName;
-	
+
 	@Min(value = 0, message = "must be greater than or equal to zero")
 	@Max(value = 10, message = "must be less than or equal to ten")
 	private Integer freePasses;
-	
+
 	@Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "only five digits/chars")
 	private String postalCode;
-	
-	@CourseCode
+
+	@CourseCode(value = { "LUV", "CME" }, message = "must start with TOPS or LUV")
 	private String courseCode;
 
 	public String getCourseCode() {
